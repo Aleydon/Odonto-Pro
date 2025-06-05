@@ -14,8 +14,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Next 15',
-  description: 'Next 15 Template'
+  title: 'Odonto-Pro',
+  description:
+    'Odonto-Pro is a comprehensive dental practice management software designed to streamline operations, enhance patient care, and improve overall efficiency in dental clinics.'
 };
 
 export default function RootLayout({
