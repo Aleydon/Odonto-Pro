@@ -1,6 +1,6 @@
 'use client';
 
-import { Menu } from 'lucide-react';
+import { LogIn, Menu } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -16,6 +16,7 @@ import {
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const session = null; // Replace with actual session management logic
 
   function Navigation() {
     const navItems = [
@@ -36,9 +37,33 @@ export function Header() {
               setIsOpen(!isOpen);
             }}
           >
-            <Link href={item.href}>{item.label}</Link>
+            <Link className="text-base" href={item.href}>
+              {item.label}
+            </Link>
           </Button>
         ))}
+        {session ? (
+          <Link
+            className="flex items-center justify-center gap-2"
+            href="/dashboard"
+          >
+            Access clinic
+          </Link>
+        ) : (
+          <Button
+            className="bg-zinc-900 text-white hover:bg-zinc-800 hover:text-white"
+            asChild
+            variant="ghost"
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+          >
+            <Link href="/login">
+              <LogIn className="h-4 w-4 mr-2" />
+              Clinic portal
+            </Link>
+          </Button>
+        )}
       </>
     );
   }
