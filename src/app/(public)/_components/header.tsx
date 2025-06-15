@@ -16,7 +16,7 @@ import {
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const session = null; // Replace with actual session management logic
+  const session = false; // Replace with actual session management logic
 
   function Navigation() {
     const navItems = [
