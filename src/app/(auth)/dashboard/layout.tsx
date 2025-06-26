@@ -1,5 +1,7 @@
 import { type Metadata } from 'next';
 
+import { Sidebar } from './_components/sidebar';
+
 export const metadata: Metadata = {
   title: 'Dashboard',
   description: 'Odonto-Pro - Dashboard'
@@ -12,8 +14,7 @@ export default function DashboardLayout({
 }) {
   return (
     <>
-      <h2>Dashboard Layout</h2>
-      {children}
+      <Sidebar>{children}</Sidebar>
     </>
   );
 }
