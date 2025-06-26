@@ -5,17 +5,17 @@ import { Button } from '@/components/ui/button';
 export function Hero() {
   return (
     <section>
-      <div className="container mx-auto px-4 pt-20 pb-4 sm:pb-0 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 pt-20 pb-4 sm:px-6 sm:pb-0 lg:px-8">
         <main className="flex items-center justify-center">
-          <article className="flex-2 space-y-8 max-w-3xl">
-            <h1 className="text-3xl font-bold lg:text-5xl max-w-2xl tracking-tight">
+          <article className="max-w-3xl flex-2 space-y-8">
+            <h1 className="max-w-2xl text-3xl font-bold tracking-tight lg:text-5xl">
               Find the best professionals in one place!
             </h1>
-            <p className="text-base md:text-lg text-zinc-700">
+            <p className="text-base text-zinc-700 md:text-lg">
               We are a platform for healthcare professionals focused on
               streamlining their care in a simplified and organized way.
             </p>
-            <Button className="w-fit px-6 font-semibold bg-emerald-500 hover:bg-emerald-400">
+            <Button className="w-fit bg-emerald-500 px-6 font-semibold hover:bg-emerald-400">
               Available professionals
             </Button>
           </article>

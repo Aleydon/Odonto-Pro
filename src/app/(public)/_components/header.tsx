@@ -59,7 +59,7 @@ export function Header() {
             }}
           >
             <Link href="/login">
-              <LogIn className="h-4 w-4 mr-2" />
+              <LogIn className="mr-2 h-4 w-4" />
               Clinic portal
             </Link>
           </Button>
@@ -69,12 +69,12 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 right-0 left-0 z-[999] bg-white py-4 px-6">
+    <header className="fixed top-0 right-0 left-0 z-[999] bg-white px-6 py-4">
       <div className="container mx-auto flex items-center justify-between">
         <Link className="text-3xl font-bold text-zinc-900" href="/">
           Odonto<span className="font-bold text-emerald-500">Pro</span>
         </Link>
-        <nav className="hidden md:flex items-center space-x-4">
+        <nav className="hidden items-center space-x-4 md:flex">
           <Navigation />
         </nav>
 
@@ -89,7 +89,7 @@ export function Header() {
               <SheetTitle>Menu</SheetTitle>
               <SheetDescription>See our links</SheetDescription>
             </SheetHeader>
-            <nav className="flex flex-col space-y-4 mt-6">
+            <nav className="mt-6 flex flex-col space-y-4">
               <Navigation />
             </nav>
           </SheetContent>
