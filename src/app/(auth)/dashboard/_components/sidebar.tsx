@@ -65,6 +65,45 @@ export function Sidebar({ children }: { children: React.ReactNode }) {
             )}
           </Button>
         </div>
+
+        {/* Sidebar when is collapsed */}
+        {isCollapsed && (
+          <Collapsible open={isCollapsed}>
+            <nav className="mt-2 flex flex-col gap-1 overflow-hidden">
+              <SidebarLink
+                href="/dashboard"
+                label="Appointments"
+                icon={<CalendarCheck2 className="h-6 w-6" />}
+                pathname={pathname}
+                isCollapsed={isCollapsed}
+              />
+              <SidebarLink
+                href="/dashboard/services"
+                label="Services"
+                icon={<Folder className="h-6 w-6" />}
+                pathname={pathname}
+                isCollapsed={isCollapsed}
+              />
+
+              <SidebarLink
+                href="/dashboard/profile"
+                label="Profile"
+                icon={<Settings className="h-6 w-6" />}
+                pathname={pathname}
+                isCollapsed={isCollapsed}
+              />
+              <SidebarLink
+                href="/dashboard/plans"
+                label="Plans"
+                icon={<Banknote className="h-6 w-6" />}
+                pathname={pathname}
+                isCollapsed={isCollapsed}
+              />
+            </nav>
+          </Collapsible>
+        )}
+
+        {/* Sidebar when is not collapsed */}
         <Collapsible open={!isCollapsed}>
           <CollapsibleContent>
             <nav className="flex flex-col gap-1 overflow-hidden">
